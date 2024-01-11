@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "BitcoinCore",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v13), .macOS(.v10_15)
     ],
     products: [
         .library(
@@ -21,8 +21,8 @@ let package = Package(
         .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "5.0.1")),
 
         .package(url: "https://github.com/horizontalsystems/Checkpoints.git", .upToNextMajor(from: "1.0.0")),
-        .package(url: "https://github.com/horizontalsystems/HdWalletKit.Swift.git", .upToNextMajor(from: "1.2.1")),
-        .package(url: "https://github.com/horizontalsystems/HsCryptoKit.Swift.git", .upToNextMajor(from: "1.2.1")),
+        .package(url: "https://github.com/metalurgical/HdWalletKit.Swift.git", branch: "upgrade_secp256k1_0_12_2"),
+        .package(url: "https://github.com/metalurgical/HsCryptoKit.Swift", branch: "upgrade_secp256k1_0_12_2"),
         .package(url: "https://github.com/horizontalsystems/HsExtensions.Swift.git", .upToNextMajor(from: "1.0.6")),
         .package(url: "https://github.com/horizontalsystems/HsToolKit.Swift.git", .upToNextMajor(from: "2.0.0")),
     ],
